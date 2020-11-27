@@ -33,6 +33,7 @@
 int main()
 {
     // Setup GPIOs
+    reg_mprj_io_6 = GPIO_MODE_USER_STD_OUTPUT;
     volatile uint32_t *io = &reg_mprj_io_8;
     for (unsigned i=0; i<17; i++)
         io[i] = GPIO_MODE_USER_STD_OUTPUT;

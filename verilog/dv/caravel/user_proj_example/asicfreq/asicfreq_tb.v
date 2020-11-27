@@ -39,6 +39,7 @@ module asicfreq_tb;
         $stop;
     end
 
+    // apply a clock to the signal under test (SUT) pin
     assign mprj_io[25] = clock;
 
     // Check the last statement in the C program
@@ -86,8 +87,8 @@ module asicfreq_tb;
 
     assign VDD3V3 = power1;
     assign VDD1V8 = power2;
-    assign USER_VDD3V3 = power3;
-    assign USER_VDD1V8 = power4;
+    wire USER_VDD3V3 = power3;
+    wire USER_VDD1V8 = power4;
     assign VSS = 1'b0;
 
     caravel uut (
