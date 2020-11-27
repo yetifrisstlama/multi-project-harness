@@ -47,8 +47,8 @@ module asicfreq_tb;
         if (
             uut.mprj.mprj.proj_4.strobe &&
             uut.mprj.mprj.proj_4.addr == 32'h1 &&
-            uut.mprj.mprj.proj_4.value > 32'h20 &&
-            uut.mprj.mprj.proj_4.value == (uut.mprj.mprj.proj_4.oc - 32'h8)
+            uut.mprj.mprj.proj_4.value >= 32'h300
+            // uut.mprj.mprj.proj_4.value == (uut.mprj.mprj.proj_4.oc - 32'h8)
         ) begin
             $display("PASS");
             $finish;

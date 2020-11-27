@@ -2,6 +2,9 @@
 
 // Test asicfreq frequency counter and 7-segment display interface
 
+#define reg_mprj_address_oeb0    (*(volatile uint32_t*)0x30000004)
+#define reg_mprj_address_oeb1    (*(volatile uint32_t*)0x30000008)
+
 #define reg_mprj_asicfreq_uart_div    (*(volatile uint32_t*)0x30000400)
 //   write UART clock divider (min. value = 4),
 
@@ -42,6 +45,9 @@ int main()
     // Apply configuration
     reg_mprj_xfer = 1;
     while (reg_mprj_xfer == 1);
+
+    // enable MPH outputs (all expect mprj_io[25], which is the SUT)
+    reg_mprj_address_oeb0 = (1 << 25);
 
     // change to project 4
     reg_mprj_slave = 4;
