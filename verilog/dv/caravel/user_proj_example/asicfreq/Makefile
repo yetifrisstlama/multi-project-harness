@@ -1,15 +1,14 @@
 FIRMWARE_PATH = ../..
 RTL_PATH = ../../../../rtl
 IP_PATH = ../../../../ip
-#MP_PATH = ../../../../rtl/multi_project_harness
 BEHAVIOURAL_MODELS = ../../
 
 TOOLCHAIN_PREFIX?=riscv32-unknown-elf-
-PDK_PATH?=$(PDK_ROOT)/sky130A/
+PDK_PATH?=$(PDK_ROOT)/sky130A
 
 .SUFFIXES:
 
-PATTERN = ws2812
+PATTERN = asicfreq
 
 all:  ${PATTERN:=.vcd}
 
@@ -17,7 +16,7 @@ hex:  ${PATTERN:=.hex}
 
 %.vvp: %_tb.v %.hex
 	iverilog -DFUNCTIONAL -I $(BEHAVIOURAL_MODELS) \
-	-I $(PDK_PATH) -I $(IP_PATH) -I $(RTL_PATH) \
+	-I $(PDK_PATH) -I $(RTL_PATH) \
 	$< -o $@
 
 %.vcd: %.vvp
@@ -25,6 +24,9 @@ hex:  ${PATTERN:=.hex}
 
 %.elf: %.c $(FIRMWARE_PATH)/sections.lds $(FIRMWARE_PATH)/start.s
 	$(TOOLCHAIN_PREFIX)gcc -mabi=ilp32 -march=rv32imc -Wl,-Bstatic,-T,$(FIRMWARE_PATH)/sections.lds,--strip-debug -ffreestanding -nostdlib -o $@ $(FIRMWARE_PATH)/start.s $<
+
+%.lst: %.elf
+	$(TOOLCHAIN_PREFIX)objdump -d $< > $@
 
 %.hex: %.elf
 	$(TOOLCHAIN_PREFIX)objcopy -O verilog $< $@
