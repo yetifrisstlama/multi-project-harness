@@ -36,11 +36,22 @@ module asicfreq_tb;
         $display("%c[1;31m",27);
         $display ("Monitor: Timeout, Test Mega-Project IO Ports (RTL) Failed");
         $display("%c[0m",27);
+        $display("FAIL");
         $stop;
     end
 
-    // apply a clock to the signal under test (SUT) pin
-    assign mprj_io[25] = clock;
+    // apply a clock to the signal under test (SUT) pad
+    // ... that's as deep as I could dig in the hierarchy
+    //
+    // mprj_io[17: 0] --> area1_io_pad[17:0]
+    // mprj_io[37:18] --> area2_io_pad[19:0]
+    //
+    // also interesting:
+    // uut.padframe.mprj_pads.area2_io_pad[7].gpiov2_base.x_on_pad
+    // uut.padframe.mprj_pads.area2_io_pad[7].gpiov2_base.pad_tristate
+    assign uut.padframe.mprj_pads.area2_io_pad[7].gpiov2_base.PAD = clock;
+
+    // assign mprj_io[25] = clock;
 
     // Check the last statement in the C program
     always @(posedge clock) begin
@@ -50,8 +61,22 @@ module asicfreq_tb;
             uut.mprj.mprj.proj_4.value >= 32'h300
             // uut.mprj.mprj.proj_4.value == (uut.mprj.mprj.proj_4.oc - 32'h8)
         ) begin
-            $display("PASS");
-            $finish;
+            if (
+                // area1_io_pad[6] = ser_tx output
+                !uut.padframe.mprj_pads.area1_io_pad[6].gpiov2_base.x_on_pad &&
+                !uut.padframe.mprj_pads.area1_io_pad[6].gpiov2_base.pad_tristate &&
+
+                // area2_io_pad[7] = mprj_io[25] = SUT input
+                uut.padframe.mprj_pads.area2_io_pad[7].gpiov2_base.pad_tristate &&
+                !uut.padframe.mprj_pads.area2_io_pad[7].gpiov2_base.x_on_pad
+            ) begin
+                $display("PASS");
+                $finish;
+            end else begin
+                $display("GPIO error");
+                $display("FAIL");
+                $stop;
+            end
         end
     end
 

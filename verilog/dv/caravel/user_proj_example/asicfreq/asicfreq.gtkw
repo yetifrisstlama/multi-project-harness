@@ -1,18 +1,24 @@
 [dumpfile] "asicfreq.vcd"
-[timestart] 520440000
+[timestart] 86200000
 [size] 2044 1108
 [pos] -1 -1
-*-22.000000 548687500 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+*-26.000000 534400000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
 [treeopen] asicfreq_tb.
 [treeopen] asicfreq_tb.uut.
-[treeopen] asicfreq_tb.uut.mprj.
 [treeopen] asicfreq_tb.uut.mprj.mprj.
 [treeopen] asicfreq_tb.uut.mprj.mprj.proj_4.
-[treeopen] asicfreq_tb.uut.soc.
+[treeopen] asicfreq_tb.uut.padframe.
+[treeopen] asicfreq_tb.uut.padframe.mprj_pads.
+[treeopen] asicfreq_tb.uut.padframe.mprj_pads.area1_io_pad[6].
+[treeopen] asicfreq_tb.uut.padframe.mprj_pads.area2_io_pad[5].
+[treeopen] asicfreq_tb.uut.padframe.mprj_pads.area2_io_pad[6].
+[treeopen] asicfreq_tb.uut.padframe.mprj_pads.area2_io_pad[7].
+[treeopen] asicfreq_tb.uut.padframe.mprj_pads.area2_io_pad[8].
+[treeopen] asicfreq_tb.uut.padframe.mprj_pads.area2_io_pad[9].
 [treeopen] asicfreq_tb.uut.soc.soc.
 [treeopen] asicfreq_tb.uut.soc.soc.cpu.
 [treeopen] asicfreq_tb.uut.soc.soc.cpu.picorv32_core.
-[sst_width] 285
+[sst_width] 284
 [signals_width] 363
 [sst_expanded] 1
 [sst_vpaned_height] 432
@@ -35,13 +41,14 @@ asicfreq_tb.uut.soc.soc.cpu.picorv32_core.dbg_mem_wstrb[3:0]
 -CPU
 @22
 asicfreq_tb.uut.mprj.mprj.active_project[7:0]
+asicfreq_tb.uut.mprj.io_oeb[37:0]
 @800200
 -proj_4
 @28
 asicfreq_tb.uut.mprj.mprj.proj_4.rst
 @200
 -
-@29
+@28
 asicfreq_tb.uut.mprj.mprj.proj_4.strobe
 @22
 asicfreq_tb.uut.mprj.mprj.proj_4.addr[3:0]
@@ -82,5 +89,248 @@ asicfreq_tb.uut.mprj.mprj.proj_4.serial.uart.tx_data[7:0]
 asicfreq_tb.uut.mprj.mprj.proj_4.serial_tx_out
 @1000200
 -proj_4
+@c00200
+-gpio_madness
+@800200
+-user_project_wrapper
+@22
+asicfreq_tb.uut.mprj.io_in[37:0]
+@c00022
+asicfreq_tb.uut.mprj.io_oeb[37:0]
+@28
+(0)asicfreq_tb.uut.mprj.io_oeb[37:0]
+(1)asicfreq_tb.uut.mprj.io_oeb[37:0]
+(2)asicfreq_tb.uut.mprj.io_oeb[37:0]
+(3)asicfreq_tb.uut.mprj.io_oeb[37:0]
+(4)asicfreq_tb.uut.mprj.io_oeb[37:0]
+(5)asicfreq_tb.uut.mprj.io_oeb[37:0]
+(6)asicfreq_tb.uut.mprj.io_oeb[37:0]
+(7)asicfreq_tb.uut.mprj.io_oeb[37:0]
+(8)asicfreq_tb.uut.mprj.io_oeb[37:0]
+(9)asicfreq_tb.uut.mprj.io_oeb[37:0]
+(10)asicfreq_tb.uut.mprj.io_oeb[37:0]
+(11)asicfreq_tb.uut.mprj.io_oeb[37:0]
+(12)asicfreq_tb.uut.mprj.io_oeb[37:0]
+(13)asicfreq_tb.uut.mprj.io_oeb[37:0]
+(14)asicfreq_tb.uut.mprj.io_oeb[37:0]
+(15)asicfreq_tb.uut.mprj.io_oeb[37:0]
+(16)asicfreq_tb.uut.mprj.io_oeb[37:0]
+(17)asicfreq_tb.uut.mprj.io_oeb[37:0]
+(18)asicfreq_tb.uut.mprj.io_oeb[37:0]
+(19)asicfreq_tb.uut.mprj.io_oeb[37:0]
+(20)asicfreq_tb.uut.mprj.io_oeb[37:0]
+(21)asicfreq_tb.uut.mprj.io_oeb[37:0]
+(22)asicfreq_tb.uut.mprj.io_oeb[37:0]
+(23)asicfreq_tb.uut.mprj.io_oeb[37:0]
+(24)asicfreq_tb.uut.mprj.io_oeb[37:0]
+(25)asicfreq_tb.uut.mprj.io_oeb[37:0]
+(26)asicfreq_tb.uut.mprj.io_oeb[37:0]
+(27)asicfreq_tb.uut.mprj.io_oeb[37:0]
+(28)asicfreq_tb.uut.mprj.io_oeb[37:0]
+(29)asicfreq_tb.uut.mprj.io_oeb[37:0]
+(30)asicfreq_tb.uut.mprj.io_oeb[37:0]
+(31)asicfreq_tb.uut.mprj.io_oeb[37:0]
+(32)asicfreq_tb.uut.mprj.io_oeb[37:0]
+(33)asicfreq_tb.uut.mprj.io_oeb[37:0]
+(34)asicfreq_tb.uut.mprj.io_oeb[37:0]
+(35)asicfreq_tb.uut.mprj.io_oeb[37:0]
+(36)asicfreq_tb.uut.mprj.io_oeb[37:0]
+(37)asicfreq_tb.uut.mprj.io_oeb[37:0]
+@1401200
+-group_end
+@c00022
+asicfreq_tb.uut.mprj.io_out[37:0]
+@28
+(0)asicfreq_tb.uut.mprj.io_out[37:0]
+(1)asicfreq_tb.uut.mprj.io_out[37:0]
+(2)asicfreq_tb.uut.mprj.io_out[37:0]
+(3)asicfreq_tb.uut.mprj.io_out[37:0]
+(4)asicfreq_tb.uut.mprj.io_out[37:0]
+(5)asicfreq_tb.uut.mprj.io_out[37:0]
+(6)asicfreq_tb.uut.mprj.io_out[37:0]
+(7)asicfreq_tb.uut.mprj.io_out[37:0]
+(8)asicfreq_tb.uut.mprj.io_out[37:0]
+(9)asicfreq_tb.uut.mprj.io_out[37:0]
+(10)asicfreq_tb.uut.mprj.io_out[37:0]
+(11)asicfreq_tb.uut.mprj.io_out[37:0]
+(12)asicfreq_tb.uut.mprj.io_out[37:0]
+(13)asicfreq_tb.uut.mprj.io_out[37:0]
+(14)asicfreq_tb.uut.mprj.io_out[37:0]
+(15)asicfreq_tb.uut.mprj.io_out[37:0]
+(16)asicfreq_tb.uut.mprj.io_out[37:0]
+(17)asicfreq_tb.uut.mprj.io_out[37:0]
+(18)asicfreq_tb.uut.mprj.io_out[37:0]
+(19)asicfreq_tb.uut.mprj.io_out[37:0]
+(20)asicfreq_tb.uut.mprj.io_out[37:0]
+(21)asicfreq_tb.uut.mprj.io_out[37:0]
+(22)asicfreq_tb.uut.mprj.io_out[37:0]
+(23)asicfreq_tb.uut.mprj.io_out[37:0]
+(24)asicfreq_tb.uut.mprj.io_out[37:0]
+(25)asicfreq_tb.uut.mprj.io_out[37:0]
+(26)asicfreq_tb.uut.mprj.io_out[37:0]
+(27)asicfreq_tb.uut.mprj.io_out[37:0]
+(28)asicfreq_tb.uut.mprj.io_out[37:0]
+(29)asicfreq_tb.uut.mprj.io_out[37:0]
+(30)asicfreq_tb.uut.mprj.io_out[37:0]
+(31)asicfreq_tb.uut.mprj.io_out[37:0]
+(32)asicfreq_tb.uut.mprj.io_out[37:0]
+(33)asicfreq_tb.uut.mprj.io_out[37:0]
+(34)asicfreq_tb.uut.mprj.io_out[37:0]
+(35)asicfreq_tb.uut.mprj.io_out[37:0]
+(36)asicfreq_tb.uut.mprj.io_out[37:0]
+(37)asicfreq_tb.uut.mprj.io_out[37:0]
+@1401200
+-group_end
+@1000200
+-user_project_wrapper
+@800200
+-caravel
+@c00022
+asicfreq_tb.uut.user_io_in[37:0]
+@28
+(0)asicfreq_tb.uut.user_io_in[37:0]
+(1)asicfreq_tb.uut.user_io_in[37:0]
+(2)asicfreq_tb.uut.user_io_in[37:0]
+(3)asicfreq_tb.uut.user_io_in[37:0]
+(4)asicfreq_tb.uut.user_io_in[37:0]
+(5)asicfreq_tb.uut.user_io_in[37:0]
+(6)asicfreq_tb.uut.user_io_in[37:0]
+(7)asicfreq_tb.uut.user_io_in[37:0]
+(8)asicfreq_tb.uut.user_io_in[37:0]
+(9)asicfreq_tb.uut.user_io_in[37:0]
+(10)asicfreq_tb.uut.user_io_in[37:0]
+(11)asicfreq_tb.uut.user_io_in[37:0]
+(12)asicfreq_tb.uut.user_io_in[37:0]
+(13)asicfreq_tb.uut.user_io_in[37:0]
+(14)asicfreq_tb.uut.user_io_in[37:0]
+(15)asicfreq_tb.uut.user_io_in[37:0]
+(16)asicfreq_tb.uut.user_io_in[37:0]
+(17)asicfreq_tb.uut.user_io_in[37:0]
+(18)asicfreq_tb.uut.user_io_in[37:0]
+(19)asicfreq_tb.uut.user_io_in[37:0]
+(20)asicfreq_tb.uut.user_io_in[37:0]
+(21)asicfreq_tb.uut.user_io_in[37:0]
+(22)asicfreq_tb.uut.user_io_in[37:0]
+(23)asicfreq_tb.uut.user_io_in[37:0]
+(24)asicfreq_tb.uut.user_io_in[37:0]
+(25)asicfreq_tb.uut.user_io_in[37:0]
+(26)asicfreq_tb.uut.user_io_in[37:0]
+(27)asicfreq_tb.uut.user_io_in[37:0]
+(28)asicfreq_tb.uut.user_io_in[37:0]
+(29)asicfreq_tb.uut.user_io_in[37:0]
+(30)asicfreq_tb.uut.user_io_in[37:0]
+(31)asicfreq_tb.uut.user_io_in[37:0]
+(32)asicfreq_tb.uut.user_io_in[37:0]
+(33)asicfreq_tb.uut.user_io_in[37:0]
+(34)asicfreq_tb.uut.user_io_in[37:0]
+(35)asicfreq_tb.uut.user_io_in[37:0]
+(36)asicfreq_tb.uut.user_io_in[37:0]
+(37)asicfreq_tb.uut.user_io_in[37:0]
+@1401200
+-group_end
+@22
+asicfreq_tb.uut.user_io_oeb[37:0]
+@c00022
+asicfreq_tb.uut.user_io_out[37:0]
+@28
+(0)asicfreq_tb.uut.user_io_out[37:0]
+(1)asicfreq_tb.uut.user_io_out[37:0]
+(2)asicfreq_tb.uut.user_io_out[37:0]
+(3)asicfreq_tb.uut.user_io_out[37:0]
+(4)asicfreq_tb.uut.user_io_out[37:0]
+(5)asicfreq_tb.uut.user_io_out[37:0]
+(6)asicfreq_tb.uut.user_io_out[37:0]
+(7)asicfreq_tb.uut.user_io_out[37:0]
+(8)asicfreq_tb.uut.user_io_out[37:0]
+(9)asicfreq_tb.uut.user_io_out[37:0]
+(10)asicfreq_tb.uut.user_io_out[37:0]
+(11)asicfreq_tb.uut.user_io_out[37:0]
+(12)asicfreq_tb.uut.user_io_out[37:0]
+(13)asicfreq_tb.uut.user_io_out[37:0]
+(14)asicfreq_tb.uut.user_io_out[37:0]
+(15)asicfreq_tb.uut.user_io_out[37:0]
+(16)asicfreq_tb.uut.user_io_out[37:0]
+(17)asicfreq_tb.uut.user_io_out[37:0]
+(18)asicfreq_tb.uut.user_io_out[37:0]
+(19)asicfreq_tb.uut.user_io_out[37:0]
+(20)asicfreq_tb.uut.user_io_out[37:0]
+(21)asicfreq_tb.uut.user_io_out[37:0]
+(22)asicfreq_tb.uut.user_io_out[37:0]
+(23)asicfreq_tb.uut.user_io_out[37:0]
+(24)asicfreq_tb.uut.user_io_out[37:0]
+(25)asicfreq_tb.uut.user_io_out[37:0]
+(26)asicfreq_tb.uut.user_io_out[37:0]
+(27)asicfreq_tb.uut.user_io_out[37:0]
+(28)asicfreq_tb.uut.user_io_out[37:0]
+(29)asicfreq_tb.uut.user_io_out[37:0]
+(30)asicfreq_tb.uut.user_io_out[37:0]
+(31)asicfreq_tb.uut.user_io_out[37:0]
+(32)asicfreq_tb.uut.user_io_out[37:0]
+(33)asicfreq_tb.uut.user_io_out[37:0]
+(34)asicfreq_tb.uut.user_io_out[37:0]
+(35)asicfreq_tb.uut.user_io_out[37:0]
+(36)asicfreq_tb.uut.user_io_out[37:0]
+(37)asicfreq_tb.uut.user_io_out[37:0]
+@1401200
+-group_end
+@1000200
+-caravel
+@800200
+-gpio_control_block
+@28
+asicfreq_tb.uut.gpio_control_in[25].mgmt_ena
+@200
+-
+@28
+asicfreq_tb.uut.gpio_control_in[25].user_gpio_in
+asicfreq_tb.uut.gpio_control_in[25].user_gpio_oeb
+asicfreq_tb.uut.gpio_control_in[25].user_gpio_out
+asicfreq_tb.uut.gpio_control_in[25].pad_gpio_in
+asicfreq_tb.uut.gpio_control_in[25].pad_gpio_inenb
+asicfreq_tb.uut.gpio_control_in[25].pad_gpio_out
+asicfreq_tb.uut.gpio_control_in[25].pad_gpio_outenb
+@200
+-
+@28
+asicfreq_tb.uut.gpio_control_in[6].user_gpio_in
+asicfreq_tb.uut.gpio_control_in[6].user_gpio_oeb
+asicfreq_tb.uut.gpio_control_in[6].user_gpio_out
+asicfreq_tb.uut.gpio_control_in[6].pad_gpio_in
+asicfreq_tb.uut.gpio_control_in[6].pad_gpio_inenb
+asicfreq_tb.uut.gpio_control_in[6].pad_gpio_out
+asicfreq_tb.uut.gpio_control_in[6].pad_gpio_outenb
+@1000200
+-gpio_control_block
+@800200
+-padframe
+@28
+(12)asicfreq_tb.uut.padframe.mprj_io_oeb[37:0]
+(31)asicfreq_tb.uut.padframe.mprj_io_oeb[37:0]
+@1000200
+-padframe
+@800200
+-mprj_io
+@28
+(12)asicfreq_tb.uut.padframe.mprj_pads.oeb[37:0]
+(31)asicfreq_tb.uut.padframe.mprj_pads.oeb[37:0]
+@1000200
+-mprj_io
+@800200
+-gpiovx_base
+@28
+asicfreq_tb.uut.padframe.mprj_pads.area1_io_pad[6].gpiov2_base.PAD
+asicfreq_tb.uut.padframe.mprj_pads.area1_io_pad[6].gpiov2_base.pad_tristate
+asicfreq_tb.uut.padframe.mprj_pads.area1_io_pad[6].gpiov2_base.x_on_pad
+@200
+-
+@28
+asicfreq_tb.uut.padframe.mprj_pads.area2_io_pad[7].gpiov2_base.PAD
+asicfreq_tb.uut.padframe.mprj_pads.area2_io_pad[7].gpiov2_base.pad_tristate
+asicfreq_tb.uut.padframe.mprj_pads.area2_io_pad[7].gpiov2_base.x_on_pad
+asicfreq_tb.uut.padframe.mprj_pads.area2_io_pad[7].gpiov2_base.IN
+@1000200
+-gpiovx_base
+@1401200
+-gpio_madness
 [pattern_trace] 1
 [pattern_trace] 0

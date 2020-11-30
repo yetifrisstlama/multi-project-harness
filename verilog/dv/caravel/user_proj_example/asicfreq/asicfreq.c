@@ -47,6 +47,8 @@ int main()
     while (reg_mprj_xfer == 1);
 
     // enable MPH outputs (all expect mprj_io[25], which is the SUT)
+    // oeb is ignored for pads configured as GPIO_MODE_USER_STD_INPUT_*
+    // inputs are not read for pads configured as GPIO_MODE_USER_STD_OUTPUT_*
     reg_mprj_address_oeb0 = (1 << 25);
 
     // change to project 4
